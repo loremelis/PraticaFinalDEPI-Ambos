@@ -1,0 +1,65 @@
+
+<ion-header>
+    <ion-navbar color="secondary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Añadir Paciente</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+      <div align= "center" ><img class="profile-photo" src={{patient.avatar}} *ngIf="!!patient.avatar"></div>
+          <ion-item>
+            <ion-label>Nombre</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.nombre"  placeholder="Nombre"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Apellidos</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.apellidos"  placeholder="Apellidos"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>DNI</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.dni"  placeholder="DNI"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Código Id</ion-label>
+            <ion-input type="number" [(ngModel)]= "patient.codigoidentificador"  placeholder="12345"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sexo</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.sexo"  placeholder="H o M"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Edad</ion-label>
+            <ion-input type="number" [(ngModel)]= "patient.edad"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Lugar de nacimiento</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.lugarnacimiento" placeholder="Madrid"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Enfermedades</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.enfermedades" placeholder="Hepatitis C"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Alergias</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.alergias" placeholder="Lactosa"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Medicamentos</ion-label>
+            <ion-input type="text" [(ngModel)]= "patient.medicamentos" placeholder="Aspirina"></ion-input>
+          </ion-item>
+          <div text-center>
+            <button class="button" ion-button  type="button" round large (click)="takePhoto()">
+              <ion-icon name="md-camera"></ion-icon>
+            </button>
+          </div>
+          <!-- <button ion-button  type="button" full round large (click)="selectPhoto()">
+            <ion-icon name="md-image"></ion-icon>
+          </button> -->
+          <div align="center">
+            <button class="button" ion-button large full round (click)="addPatient(patient)">Agregar</button>
+          </div>
+  </ion-content>
+  

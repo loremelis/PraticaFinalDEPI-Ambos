@@ -1,0 +1,32 @@
+<!--
+  Generated template for the EditPatientPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{observation?.paciente}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+      <ion-label>Observación</ion-label>
+      <ion-input type="text" [(ngModel)]= "observation.observacion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Hora de registro</ion-label>
+      <ion-input type="number" [(ngModel)]= "observation.hora"></ion-input>
+    </ion-item>
+
+
+    <div align="center">
+        <button ion-button block full large round (click)="removeObservation(observation)">Eliminar</button>
+      </div>
+</ion-content>

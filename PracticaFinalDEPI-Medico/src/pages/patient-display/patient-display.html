@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{patient?.nombre}} {{patient?.apellidos}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div align= "center"><img class="profile-photo" src={{patient.avatar}}></div>
+  <ion-list>
+    <p class= "personal-list" ion-text color="light"><strong>DNI: </strong>{{patient.dni}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Código ID: </strong>{{patient.codigoidentificador}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Sexo: </strong>{{patient.sexo}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Edad: </strong>{{patient.edad}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Lugar de nacimiento: </strong>{{patient.lugarnacimiento}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Enfermedades: </strong>{{patient.enfermedades}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Alergias: </strong>{{patient.alergias}}</p>
+    <p class= "personal-list" ion-text color="light"><strong>Medicamentos: </strong>{{patient.medicamentos}}</p>
+  </ion-list>
+  <div align="center">
+      <button class="button" ion-button large full round [navPush]="EditPush" [navParams]="{patient:patient}">Editar</button>
+  </div>
+</ion-content>

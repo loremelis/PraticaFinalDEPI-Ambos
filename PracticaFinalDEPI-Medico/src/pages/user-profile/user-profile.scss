@@ -1,0 +1,26 @@
+page-user-profile {
+    .list-personal{
+        padding-right: 0px;
+        }
+    .my-item-list{
+        font-size: 1rem;
+        }
+    .my-img{
+        margin-bottom: 1em;
+        }   
+    .personal-list{
+        margin-top: 0em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+        margin-right: 0em;
+        font-size: 15px !important;
+        }
+
+    .profile-photo{
+        width:150px;
+        height:150px;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        margin-bottom: 1em;
+    }
+}

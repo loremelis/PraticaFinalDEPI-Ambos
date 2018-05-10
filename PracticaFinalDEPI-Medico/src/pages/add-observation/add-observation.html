@@ -1,0 +1,24 @@
+
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{patient?.nombre}} {{patient?.apellidos}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+        <ion-item>
+          <ion-label>Observación: </ion-label>
+          <ion-input type="text" [(ngModel)]= "observation.observacion"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hora de registro: </ion-label>
+          <ion-input type="number" [(ngModel)]= "observation.hora"></ion-input>
+        </ion-item>
+        <div align="center">
+          <button class="button" ion-button large full round (click)="addObservation(observation)">Agregar</button>
+        </div>
+</ion-content>
+

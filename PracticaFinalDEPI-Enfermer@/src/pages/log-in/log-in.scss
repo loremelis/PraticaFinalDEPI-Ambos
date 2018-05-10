@@ -1,0 +1,21 @@
+page-log-in {
+    ion-content .scroll-content {
+        overflow : hidden !important;
+    }
+
+    .login-photo{
+        width:160px;
+        height:160px;
+        // -webkit-border-radius: 50%;
+        // border-radius: 50%;
+        margin-bottom: 1em;
+    }
+
+    .button-ingresar{
+        background-color: #660000;
+    }
+
+    .button-registrar{
+        color: #660000;
+    }
+}
